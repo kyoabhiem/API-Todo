@@ -71,7 +71,7 @@ deleted_at: dateTime (format d-m-Y H:i:s)
 ├── requirements.txt
 ├── public
 ├── test
-    └── models.py       //data models define
+│   └── test_todo_repository.py       //unit test todo repository
 └── todo
     ├── models.py       //data models define
     ├── mapping.go      //response computing & format
