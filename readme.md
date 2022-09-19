@@ -4,7 +4,7 @@
 
 Array is used instead of real database for operation.
 
-### Gets started
+### Get started
 
 #### Running without docker
 
