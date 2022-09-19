@@ -27,30 +27,30 @@ class TodoRepository:
         return data[0]
 
     def update_todo(self, todo_id, data: TodoModel) -> (TodoModel, None):
-        todoData = self.show_todo(todo_id)
-        if todoData is None:
+        todo_data = self.show_todo(todo_id)
+        if todo_data is None:
             return None
 
-        todoData.title = data.title
-        todoData.description = data.description
-        todoData.updated_at = data.updated_at
+        todo_data.title = data.title
+        todo_data.description = data.description
+        todo_data.updated_at = data.updated_at
 
-        return todoData
+        return todo_data
 
     def delete_todo(self, todo_id: int) -> (TodoModel, None):
-        todoData = self.show_todo(todo_id)
-        if todoData is None:
+        todo_data = self.show_todo(todo_id)
+        if todo_data is None:
             return None
 
-        todoData.deleted_at = datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+        todo_data.deleted_at = datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
 
-        return todoData
+        return todo_data
 
     def finish_todo(self, todo_id: int) -> (TodoModel, None):
-        todoData = self.show_todo(todo_id)
-        if todoData is None:
+        todo_data = self.show_todo(todo_id)
+        if todo_data is None:
             return None
 
-        todoData.finished_at = datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+        todo_data.finished_at = datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
 
-        return todoData
+        return todo_data

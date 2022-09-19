@@ -5,30 +5,30 @@ from todo.model import TodoModel
 class TodoMapping:
     @staticmethod
     def map_create_request(data) -> TodoModel:
-        dtmNow = datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+        date_time_now = datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
 
-        todoModel = TodoModel(
+        todo_model = TodoModel(
             title=data['title'],
             description=data['description'],
             finished_at=None,
-            created_at=dtmNow,
-            updated_at=dtmNow,
+            created_at=date_time_now,
+            updated_at=date_time_now,
             deleted_at=None
         )
 
-        return todoModel
+        return todo_model
 
     @staticmethod
     def map_update_request(data) -> TodoModel:
-        dtmNow = datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+        date_time_now = datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
 
-        todoModel = TodoModel(
+        todo_model = TodoModel(
             title=data['title'],
             description=data['description'],
-            updated_at=dtmNow,
+            updated_at=date_time_now,
         )
 
-        return todoModel
+        return todo_model
 
     @staticmethod
     def model_to_json(data: TodoModel):
